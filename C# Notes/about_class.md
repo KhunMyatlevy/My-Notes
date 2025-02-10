@@ -412,3 +412,65 @@ class Program
 ```
 
 ---
+
+### Polymorphism and Method Overriding Example
+
+This example demonstrates Polymorphism and Method Overriding in C# using a Vehicle class and its derived classes Car, Boat, and Bicycle.
+
+```csharp
+using System;
+
+public class Vehicle
+{
+    // Base class method, marked virtual so it can be overridden
+    public virtual void Move()
+    {
+        Console.WriteLine("Vehicle is moving");
+    }
+}
+
+public class Car : Vehicle
+{
+    // Method overriding in the Car class
+    public override void Move()
+    {
+        Console.WriteLine("Car is driving");
+    }
+}
+
+public class Boat : Vehicle
+{
+    // Method overriding in the Boat class
+    public override void Move()
+    {
+        Console.WriteLine("Boat is sailing");
+    }
+}
+
+public class Bicycle : Vehicle
+{
+    // Method overriding in the Bicycle class
+    public override void Move()
+    {
+        Console.WriteLine("Bicycle is pedaling");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Vehicle myVehicle = new Vehicle();   // Vehicle object
+        Vehicle myCar = new Car();           // Car object (using Vehicle type)
+        Vehicle myBoat = new Boat();         // Boat object (using Vehicle type)
+        Vehicle myBicycle = new Bicycle();  // Bicycle object (using Vehicle type)
+
+        myVehicle.Move();   // Outputs: Vehicle is moving
+        myCar.Move();       // Outputs: Car is driving
+        myBoat.Move();      // Outputs: Boat is sailing
+        myBicycle.Move();   // Outputs: Bicycle is pedaling
+    }
+}
+```
+
+---
