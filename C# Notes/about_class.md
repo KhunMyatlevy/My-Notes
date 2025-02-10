@@ -415,7 +415,7 @@ class Program
 
 ### Polymorphism and Method Overriding Example
 
-This example demonstrates Polymorphism and Method Overriding in C# using a Vehicle class and its derived classes Car, Boat, and Bicycle.
+This example demonstrates Polymorphism and Method Overriding in C# using a Vehicle class and its derived classes Car, Boat, and Bicycle. Method overwriting is way to achieve Polymorphism.
 
 ```csharp
 using System;
