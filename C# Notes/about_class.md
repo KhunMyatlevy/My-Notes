@@ -297,7 +297,7 @@ class Program
 An array of objects is an array that stores multiple objects of a class. First, you create the array to hold the objects, and then you create instances (objects) of a class to store in that array. All the objects in the array will be of the same class.
 
 ### Example in C#:
-````csharp
+```csharp
 public class Car
 {
     public string Model { get; set; }
