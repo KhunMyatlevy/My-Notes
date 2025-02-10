@@ -28,3 +28,36 @@ public class Person
         return name;
     }
 }
+
+---
+
+## Constructor in a Class
+
+A constructor is a special method that is automatically called when an object is created. Its primary role is to initialize the object's fields to ensure it's in a valid state. Constructors can accept parameters to set initial values and can be overloaded to provide different ways of initializing objects.
+
+### Key Points:
+- Same name as the class.
+- No return type.
+- Can take parameters to set initial values.
+
+### Example in C#:
+
+`csharp
+public class Person
+{
+    private string name;
+    private int age;
+
+    // Constructor with parameters
+    public Person(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    public string GetName() => name;
+    public int GetAge() => age;
+}
+
+---
+
