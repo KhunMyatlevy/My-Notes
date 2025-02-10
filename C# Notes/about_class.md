@@ -252,3 +252,40 @@ class Program
 
 ---
 
+## Abstract Class
+
+An abstract class is a class that you cannot create objects from. It is meant to be inherited by other classes, which can then use its methods and properties. It may also have methods without a body (abstract methods), which must be defined in the classes that inherit it.
+
+### Example in C#:
+
+```csharp
+public abstract class Animal
+{
+    public string Name { get; set; }
+
+    // Abstract method (doesn't have a body)
+    public abstract void Speak();
+}
+
+public class Dog : Animal
+{
+    public override void Speak()
+    {
+        Console.WriteLine("Woof!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Cannot create an object of Animal class directly
+        // Animal animal = new Animal(); // This will give an error
+
+        Dog dog = new Dog();
+        dog.Name = "Buddy";
+        dog.Speak();  // Output: Woof!
+        Console.WriteLine($"Name: {dog.Name}");
+    }
+}
+```
