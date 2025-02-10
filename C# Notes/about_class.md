@@ -374,7 +374,7 @@ Method overriding provides a new version of a method inherited from a parent cla
 
 ### Example in C#:
 
-`csharp
+```csharp
 using System;
 
 public class Animal
@@ -409,3 +409,6 @@ class Program
         animalDog.MakeSound();  // Outputs: Bark (due to method overriding)
     }
 }
+```
+
+---
