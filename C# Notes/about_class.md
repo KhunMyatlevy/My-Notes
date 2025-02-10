@@ -82,3 +82,32 @@ public class Person
     }
 }
 ```
+
+---
+
+## Static Method
+
+A static method in a class belongs to the class itself, not to any specific object of that class. This means you can call a static method without creating an instance (object) of the class.
+
+### Example in C#:
+
+```csharp
+public class MathOperations
+{
+    // Static method
+    public static int Add(int a, int b)
+    {
+        return a + b;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Calling the static method without creating an object
+        int result = MathOperations.Add(5, 10);
+        Console.WriteLine("The sum is: " + result);
+    }
+}
+```
