@@ -514,3 +514,47 @@ class Program
     }
 }
 ```
+
+---
+
+### Simple Example of a List in C#
+
+Here's a simple example of using a List in C#:
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        // Create a list of integers
+        List<int> numbers = new List<int>();
+
+        // Add items to the list
+        numbers.Add(10);
+        numbers.Add(20);
+        numbers.Add(30);
+
+        // Access and print items from the list
+        Console.WriteLine("List items:");
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+
+        // Remove an item from the list
+        numbers.Remove(20);
+
+        // Print list after removal
+        Console.WriteLine("\nAfter removal:");
+        foreach (int number in numbers)
+        {
+            Console.WriteLine(number);
+        }
+    }
+}
+```
+
+---
