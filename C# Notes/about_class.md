@@ -364,3 +364,45 @@ class Program
         Console.WriteLine($"New Color: {myCar.Color}");
     }
 }
+
+## Method Overriding
+
+Method overriding provides a new version of a method inherited from a parent class. The method in the child class has the same signature as the one in the parent class, but the child class can change its behavior.
+
+### Example in C#:
+
+`csharp
+using System;
+
+public class Animal
+{
+    // Virtual method that can be overridden
+    public virtual void MakeSound()
+    {
+        Console.WriteLine("Some animal sound");
+    }
+}
+
+public class Dog : Animal
+{
+    // Overriding the MakeSound method
+    public override void MakeSound()
+    {
+        Console.WriteLine("Bark");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Animal myAnimal = new Animal();
+        myAnimal.MakeSound();  // Outputs: Some animal sound
+
+        Dog myDog = new Dog();
+        myDog.MakeSound();  // Outputs: Bark
+
+        Animal animalDog = new Dog();
+        animalDog.MakeSound();  // Outputs: Bark (due to method overriding)
+    }
+}
