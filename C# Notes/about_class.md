@@ -111,3 +111,45 @@ class Program
     }
 }
 ```
+
+---
+
+## Overloaded Method
+
+Method Overloading in C# allows multiple methods with the same name but different parameters (type or number) within the same class.
+
+### Key Points:
+- Overloaded methods must differ by parameters (type, number, or both).
+- Return type doesn’t affect overloading.
+- It improves code readability by using the same method name for similar tasks.
+
+### Example in C#:
+
+```csharp
+public class Calculator
+{
+    // Overloaded method to add integers
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    // Overloaded method to add doubles
+    public double Add(double a, double b)
+    {
+        return a + b;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Calculator calc = new Calculator();
+        Console.WriteLine(calc.Add(5, 10));      // Calls Add(int, int)
+        Console.WriteLine(calc.Add(5.5, 10.5));  // Calls Add(double, double)
+    }
+}
+```
+
+---
