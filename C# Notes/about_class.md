@@ -205,3 +205,50 @@ class Program
 ```
 
 ---
+
+## Inheritance
+
+Inheritance in C# allows a class (child class) to inherit fields, properties, methods, and other members from another class (parent class), enabling code reuse and creating a relationship between the classes.
+
+### Key Points:
+- Base Class: The class whose members are inherited by other classes.
+- Derived Class: The class that inherits members from the base class.
+- A derived class can add its own members or override base class methods.
+- The base keyword is used to access members of the parent class.
+
+### Example in C#:
+
+```csharp
+public class Animal
+{
+    public string Name { get; set; }
+
+    public void Eat()
+    {
+        Console.WriteLine("Eating...");
+    }
+}
+
+public class Dog : Animal
+{
+    public void Bark()
+    {
+        Console.WriteLine("Barking...");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Dog dog = new Dog();
+        dog.Name = "Buddy";
+        dog.Eat();   // Inherited method from Animal class
+        dog.Bark();  // Method of Dog class
+        Console.WriteLine($"Name: {dog.Name}");
+    }
+}
+```
+
+---
+
