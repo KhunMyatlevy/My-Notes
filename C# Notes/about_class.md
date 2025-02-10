@@ -609,3 +609,38 @@ class Program
     }
 }
 ```
+
+---
+
+### Auto-Implemented Properties
+
+In C#, auto-implemented properties allow you to quickly define properties without having to explicitly create a backing field. The compiler automatically provides the backing field for the property.
+
+#### Example:
+
+```csharp
+public class Car
+{
+    // Auto-implemented property
+    public string Model { get; set; }
+    public string Color { get; set; }
+
+    public Car(string model, string color)
+    {
+        Model = model;
+        Color = color;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create an object of Car class
+        Car myCar = new Car("Toyota", "Red");
+
+        // Accessing auto-implemented properties
+        Console.WriteLine($"Car Model: {myCar.Model}, Color: {myCar.Color}");
+    }
+}
+```
