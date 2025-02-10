@@ -327,3 +327,45 @@ class Program
 ```
 
 ---
+
+### Example: Using Object as an Argument in C#
+
+Here’s an example of using an object as an argument in C# to change the color of a car:
+
+```csharp
+public class Car
+{
+    public string Model { get; set; }
+    public string Color { get; set; }
+
+    public Car(string model, string color)
+    {
+        Model = model;
+        Color = color;
+    }
+}
+
+class Program
+{
+    // Function that takes a Car object as an argument and changes its color
+    static void ChangeCarColor(Car car, string newColor)
+    {
+        car.Color = newColor;
+    }
+
+    static void Main()
+    {
+        // Create a Car object
+        Car myCar = new Car("Toyota", "Red");
+
+        // Display original color
+        Console.WriteLine($"Original Color: {myCar.Color}");
+
+        // Change the color using the function
+        ChangeCarColor(myCar, "Blue");
+
+        // Display the new color
+        Console.WriteLine($"New Color: {myCar.Color}");
+    }
+}
+```
