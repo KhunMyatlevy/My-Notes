@@ -153,3 +153,55 @@ class Program
 ```
 
 ---
+
+## Constructor Overloading
+
+Constructor Overloading in C# allows defining multiple constructors with the same name (the class name) but different parameters (type or number).
+
+### Key Points:
+- Overloaded constructors must differ by parameters (type, number, or both).
+- It allows initializing an object in different ways based on the passed arguments.
+- The return type is always void (implicitly), and it's used to initialize the object’s fields.
+
+### Example in C#:
+
+```csharp
+public class Person
+{
+    private string name;
+    private int age;
+
+    // Constructor with name and age
+    public Person(string name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Overloaded constructor with only name
+    public Person(string name)
+    {
+        this.name = name;
+        this.age = 0;  // Default age
+    }
+
+    public void DisplayInfo()
+    {
+        Console.WriteLine($"Name: {name}, Age: {age}");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        Person person1 = new Person("John", 30);
+        person1.DisplayInfo();  // Name: John, Age: 30
+
+        Person person2 = new Person("Alice");
+        person2.DisplayInfo();  // Name: Alice, Age: 0
+    }
+}
+```
+
+---
