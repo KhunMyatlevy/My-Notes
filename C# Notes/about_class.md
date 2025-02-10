@@ -482,7 +482,7 @@ When a class inherits from (or implements) an interface in C#, it must implement
 In simpler terms:
 
 - An interface defines what methods and properties a class should have, but not how they work.
-- A class that implements the interface must provide the actual code (implementation) for those methods and properties.
+- A class that inherits from an interface must provide the actual code (implementation) for those methods and properties.
 
 If the class doesn't implement all the methods and properties from the interface, the compiler will throw an error.
 
