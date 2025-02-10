@@ -28,7 +28,7 @@ public class Person
         return name;
     }
 }
-```csharp
+```
 
 ---
 
