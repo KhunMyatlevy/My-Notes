@@ -474,3 +474,43 @@ class Program
 ```
 
 ---
+
+### Interface in a Class
+
+When a class inherits from (or implements) an interface in C#, it must implement all the methods and properties defined by that interface.
+
+In simpler terms:
+
+- An interface defines what methods and properties a class should have, but not how they work.
+- A class that implements the interface must provide the actual code (implementation) for those methods and properties.
+
+If the class doesn't implement all the methods and properties from the interface, the compiler will throw an error.
+
+Here's a quick example:
+
+```csharp
+public interface IAnimal
+{
+    void Speak();
+    string Name { get; set; }
+}
+
+public class Dog : IAnimal
+{
+    public string Name { get; set; }
+
+    public void Speak() 
+    {
+        Console.WriteLine("Bark!");
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+        IAnimal myDog = new Dog();
+        myDog.Speak();  // Outputs: Bark!
+    }
+}
+```
