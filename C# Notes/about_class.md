@@ -644,3 +644,30 @@ class Program
     }
 }
 ```
+
+---
+
+##Here is a example code of enum
+
+```csharp
+// Define an enum called CarType
+public enum CarType
+{
+    Sedan = 1,  // Assigning custom values
+    SUV = 2,
+    Truck = 3,
+    Coupe = 4
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Using the enum to assign a value
+        CarType myCar = CarType.SUV;
+
+        // Display the name and value of the enum
+        Console.WriteLine($"My car is of type: {myCar} and its value is {(int)myCar}");
+    }
+}
+```
