@@ -647,7 +647,7 @@ class Program
 
 ---
 
-##Here is a example code of enum
+### Here is a example code of enum
 
 ```csharp
 // Define an enum called CarType
