@@ -328,7 +328,7 @@ class Program
 
 Here’s an example of using an object as an argument in C# to change the color of a car:
 
-```csharp
+`csharp
 public class Car
 {
     public string Model { get; set; }
@@ -364,6 +364,3 @@ class Program
         Console.WriteLine($"New Color: {myCar.Color}");
     }
 }
-```
-
----
