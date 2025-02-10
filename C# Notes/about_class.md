@@ -292,10 +292,6 @@ class Program
 
 ---
 
-Your understanding is almost correct! Here's a simple note about an array of objects:
-
----
-
 ## Array of Objects
 
 An array of objects is an array that stores multiple objects of a class. First, you create the array to hold the objects, and then you create instances (objects) of a class to store in that array. All the objects in the array will be of the same class.
@@ -368,4 +364,5 @@ class Program
         Console.WriteLine($"New Color: {myCar.Color}");
     }
 }
+
 ```
