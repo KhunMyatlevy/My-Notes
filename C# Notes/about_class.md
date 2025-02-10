@@ -558,3 +558,54 @@ class Program
 ```
 
 ---
+
+### Polymorphism and Lists in C#
+
+With polymorphism, you can store objects from different classes, including their subclasses, in the same list, as long as they inherit from a common base class or implement the same interface.
+
+### Example with Polymorphism:
+
+```csharp
+using System;
+using System.Collections.Generic;
+
+public class Vehicle
+{
+    public string Name { get; set; }
+}
+
+public class Car : Vehicle
+{
+    public int Wheels { get; set; }
+}
+
+public class Boat : Vehicle
+{
+    public int Sails { get; set; }
+}
+
+public class ElectricCar : Car
+{
+    public int BatteryCapacity { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // List of Vehicle objects, but can hold objects of Car, Boat, and ElectricCar
+        List<Vehicle> vehicles = new List<Vehicle>();
+
+        // Add objects of different classes, including subclasses
+        vehicles.Add(new Car() { Name = "Sedan", Wheels = 4 });
+        vehicles.Add(new Boat() { Name = "Yacht", Sails = 3 });
+        vehicles.Add(new ElectricCar() { Name = "Tesla", Wheels = 4, BatteryCapacity = 100 });
+
+        // Print out the details
+        foreach (var vehicle in vehicles)
+        {
+            Console.WriteLine($"Vehicle: {vehicle.Name}");
+        }
+    }
+}
+```
