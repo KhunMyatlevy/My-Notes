@@ -289,3 +289,41 @@ class Program
     }
 }
 ```
+
+---
+
+Your understanding is almost correct! Here's a simple note about an array of objects:
+
+---
+
+## Array of Objects
+
+An array of objects is an array that stores multiple objects of a class. First, you create the array to hold the objects, and then you create instances (objects) of a class to store in that array. All the objects in the array will be of the same class.
+
+### Example in C#:
+````csharp
+public class Car
+{
+    public string Model { get; set; }
+    public int Year { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+        // Create an array of Car objects
+        Car[] cars = new Car[2];
+
+        // Create objects and assign them to the array
+        cars[0] = new Car() { Model = "Toyota", Year = 2020 };
+        cars[1] = new Car() { Model = "Honda", Year = 2022 };
+
+        // Accessing objects in the array
+        Console.WriteLine($"Car 1: {cars[0].Model}, Year: {cars[0].Year}");
+        Console.WriteLine($"Car 2: {cars[1].Model}, Year: {cars[1].Year}");
+    }
+}
+```
+
+---
