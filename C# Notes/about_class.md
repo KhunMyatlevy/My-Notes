@@ -63,3 +63,22 @@ public class Person
 
 ---
 
+## Property
+
+When fields are private, we use properties to access them. Properties allow controlled access to the field, using get to retrieve its value and set to assign a new value.
+
+### Example in C#:
+
+```csharp
+public class Person
+{
+    private string name;
+
+    // Property to access the private field
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+}
+```
