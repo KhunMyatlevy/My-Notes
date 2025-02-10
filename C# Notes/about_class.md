@@ -2,6 +2,7 @@
 
 In programming, **initialization** refers to the process of assigning an initial value to a variable or object at the time of its creation. This ensures that the variable or object starts in a well-defined state before it is used. The method of initialization can vary depending on the programming language and the data type involved. For example, in languages like C++, variables can be initialized using constructors, while in languages like Python, initialization can occur through direct assignment. Proper initialization is crucial to prevent undefined behavior and to ensure that programs operate as intended.
 
+---
 
 # Fields in a Class
 
