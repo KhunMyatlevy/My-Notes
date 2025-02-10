@@ -43,7 +43,7 @@ A constructor is a special method that is automatically called when an object is
 
 ### Example in C#:
 
-`csharp
+```csharp
 public class Person
 {
     private string name;
@@ -59,6 +59,7 @@ public class Person
     public string GetName() => name;
     public int GetAge() => age;
 }
+```
 
 ---
 
